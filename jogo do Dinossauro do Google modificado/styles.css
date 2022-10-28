@@ -1,0 +1,90 @@
+.game { /*permite criar especificaçoes para o jogo,criando e melhorando sua aparencia.*/
+
+    width: 600px; /*determina a largura do elemento.*/
+
+    height: 200px; /*define o tamanho vertical ocupado.*/
+
+    border: 5px solid rgb(0, 0, 0); /* Ela permite separar um espaço do layout de uma página,definindo onde vai aparecer.*/
+
+    margin: auto; /*define a área de margem nos quatro lados do elemento.*/
+
+    background-image: url(img/metal\ slug.png); /*adiciona uma imagem como aparencia*/
+
+    background-size: 100% 100%; /*especifica o tamanho da imagem.*/
+  }
+  
+  #dino {/*permite criar especificaçoes para o personagem,criando e melhorando sua aparencia .*/
+
+    width: 50px; /*determina a largura do elemento.*/
+
+    height: 50px; /*define o tamanho vertical ocupado.*/
+
+    background-image: url(img/hero.gif); /*adiciona uma imagem como aparencia*/
+
+    background-size: 50px 50px; /*especifica o tamanho da imagem.*/
+
+    position: relative; /*determina que o elemento será posicionado de acordo com o fluxo natural da página.*/
+
+    top: 150px; /*indica o espaço acima do elemento.*/
+  }
+  
+  .jump { /*tempo de animação do pulo do personagem*/
+    animation: jump 0.4s linear;
+  }
+  
+  @keyframes jump { /*Cada keyframe descreve como o elemento animado deveria se renderizar a um tempo dado durante a sequência de animação.
+   Como a sincronização da animação é definida por um estilo CSS que configura a animação,keyframes usam uma percentage (en-US) para indicar o tempo
+   durante a sequência de animação que eles fazem parte.*/
+
+    0% {
+      top: 150px;
+    }
+  
+    30% {
+      top: 130px;
+    }
+  
+    50% {
+      top: 80px;
+    }
+  
+    80% {
+      top: 130px;
+    }
+  
+    100% {
+      top: 150px;
+    }
+  }
+  
+  #cactus {/*permite criar especificaçoes para o inimigo,criando e melhorando sua aparencia .*/
+
+    width: 30px; /*determina a largura do elemento.*/
+
+    height: 40px; /*define o tamanho vertical ocupado.*/
+
+    position: relative; /*determina que o elemento será posicionado de acordo com o fluxo natural da página.*/
+
+    top: 110px; /*indica o espaço acima do elemento.*/
+
+    left: 500px; /*define a posição horizontal do elemento em relação a sua borda esquerda.*/
+  
+    background-image: url("img/polvo.png"); /*adiciona uma imagem como aparencia*/
+
+    background-size: 30px 40px; /*especifica o tamanho da imagem.*/
+  
+    animation: block 3s infinite linear; /*Animation é uma propriedade CSS que serve basicamente para animar outras propriedades CSS.
+    
+   infinite linear serve para definir um tempo antes do início da animação.
+    O valor passado é em segundos ou ms assim como animation-duration, e na forma curta de se escrever é sempre considerado o valor em segundos/ms que vem depois.*/
+  }
+  
+  @keyframes block {
+    0% {
+      left: 580px;
+    }
+  
+    100% {
+      left: -20px;
+    }
+  }

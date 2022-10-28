@@ -1,0 +1,54 @@
+<!DOCTYPE html> <!--todo documento html deve começar com essa declaração,essa declaração não é uma tag HTML.
+É uma "informação" para o navegador sobre qual tipo de documento esperar.-->
+
+<html lang="pt-br"> <!--O atributo global lang ajuda a definir o idioma de um elemento : a língua em que elementos não-editáveis são escritos, ou a língua em que
+elementos editáveis devem ser escritos pelo usuário.O atributo contém uma uma única “tag de idioma” em um formato definido em Tags para identificar linguagens(BCP47).-->
+
+  <head>APERTE "ENTER" PARA COMEÇAR E PULAR</head><!--O elemento html <head> providencia informações gerais (metadados) sobre o documento,
+   incluindo seu título e links para scripts e folhas de estilos.-->
+
+    <meta charset="UTF-8" /> <!--A tag meta charset="UTF-8" é uma tag meta utilizada para comunicar aos navegadores qual é o formato de codificação de caracteres utilizado
+     naquele documento.Em outras palavras,essa tag serve para que os navegadores saibam como devem renderizar os textos incluídos em uma página específica.-->
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" /> <!--A meta tag de viewport controla como um site é exibido em um dispositivo móvel.
+      Quando o Google avalia o quanto seu site é otimizado para dispositivos móveis,ele analisa a configuração da janela de visualização como um critério para otimização.-->
+
+     <title>polvo</title> <!--O html <title> ( Elemento HTML Título ) define o título do documento,mostrado na barra de título de um navegador ou na aba da página.
+      Pode conter somente texto e quaisquer marcas contidas no texto não são interpretadas.-->
+
+     <link rel="stylesheet" href="styles.css" /> <!--"rel" e "href" são dois atributos que a tag HTML link recebe.
+      A tag link tem a função de relacionar o arquivo HTML que você está escrevendo com algum outro arquivo externo.
+      O atributo "rel" vem de relacionamento, ele diz qual é a função do arquivo que você está importando. Existem vários tipos de rel,
+      mas o mais usado é "stylesheet", que significa folha de estilos, mas existem outros como "preconnect", "alternate", "author", "bookmark", "icon" e entre outros.
+      Já o "href" vem de referência, ele indica onde está o arquivo que você quer importar, que pode ser um arquivo dentro de uma pasta no seu computador,
+      por exemplo: "href"="/estilos/styles.css", ou também uma URL da internet.-->
+
+     <link rel="shortcut icon" href="img/polvo.png" />
+
+  </head>
+
+  <body> <!--BODY. Trata-se do documento em si, ou seja, a informação legível para o usuário/leitor do documento.
+    É todo e qualquer texto que se deseja apresentar, assim como toda e qualquer forma de mídia de saída (imagens, sons, miniaplicativos embutidos, conteúdo multimídia, etc).-->
+
+    <div class="game"> <!--O elemento de divisão html div é um container genérico para conteúdo de fluxo, que de certa forma não representa nada.
+     Ele pode ser utilizado para agrupar elementos para fins de estilos (usando class ou id), ou porque eles compartilham valores de atributos,como lang.
+
+     O atributo global class é uma lista das classes de um elemento,separada por espaços.
+     Classes permitem a CSS e Javascript selecionar e acessar elementos específicos através dos seletores de classe ou funções como o método DOM document-->
+
+      <div id="dino"> </div> <!--o objetivo do id é identificar o elemento ao navegar por âncoras (usando um identificador de fragmento),quando utilizar scripts ou estilizando (com CSS).
+      O valor deste atributo é uma string opaca: isso significa que os desenvolvedores não devem utilizá-lo para transmitir nenhuma informação.-->
+
+      <div id="cactus"></div>
+
+    </div>
+
+    <script src="scripts.js"></script> <!--O elemento html <script> é usado para incluir ou referenciar um script executável.
+    Conteúdo de metadados (en-US),Fluxo de conteúdo (en-US), Conteúdo fraseado (en-US). Script dinâmico, como text/javascript.
+  
+   Src significa "source" [fonte]. O valor do atributo src é a URL da imagem que você quer exibir na sua página.O URL aponta para o local onde a imagem está armazenada.-->
+
+  </body>
+
+</html> <!--o elemento </html> significa Hyper Text Markup Language, ou seja, linguagem de marcação de hipertexto.
+  Trata-se de uma linguagem de marcação para desenvolver páginas e documentos eletrônicos para a internet, fornecendo informações para usuários, navegadores e mecanismos de busca.-->
