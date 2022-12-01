@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilolist1.css">
+    <title>Document</title>
+</head>
+<body>
+    <hr>
+    <hr>
+    <div>
+        <p>LIST 1</p>
+        <main id="todolist">
+            <h1>
+              Todo List
+              <span>Get things done, one item at a time.</span>
+            </h1>
+          
+            <template v-if="todo.length">
+              <transition-group name="todolist" tag="ul">
+                <li v-for="item in todoByStatus" v-bind:class="item.done ? 'done' : ''" v-bind:key="item.id">
+                  <span class="label">{{item.label}}</span>
+                  <div class="actions">
+                    <button class="btn-picto" type="button" v-on:click="markAsDoneOrUndone(item)" v-bind:aria-label="item.done ? 'Undone' : 'Done'" v-bind:title="item.done ? 'Undone' : 'Done'">
+                      <i aria-hidden="true" class="material-icons">{{ item.done ? 'check_box' : 'check_box_outline_blank' }}</i>
+                    </button>
+                    <button class="btn-picto" type="button" v-on:click="deleteItemFromList(item)" aria-label="Delete" title="Delete">
+                      <i aria-hidden="true" class="material-icons">delete</i>
+                    </button>
+                  </div>
+                </li>
+              </transition-group>
+              <togglebutton 
+                            label="Move done items at the end?"
+                            name="todosort"
+                            v-on:clicked="clickontoogle" />
+            </template>
+            <p v-else class="emptylist">Your todo list is empty.</p>
+          
+            <form name="newform" v-on:submit.prevent="addItem">
+              <label for="newitem">Add to the todo list</label>
+              <input type="text" name="newitem" id="newitem" v-model="newitem">
+              <button type="submit">Add item</button>
+            </form>
+          </main>
+        
+    </div>
+    <hr>
+    <a href="../index.html">VOLTAR</a>
+    <hr>
+    <div>
+        <p>LIST 2</p>
+        <header class="header">
+  	
+        </header>
+        
+        <section class="content">
+            <ul class="list">
+            <li class="list__item">
+              <label class="label--checkbox">
+                  <input type="checkbox" class="checkbox" checked>
+                    Item 1
+              </label>
+            </li>
+            <li class="list__item">
+              <label class="label--checkbox">
+                  <input type="checkbox" class="checkbox">
+                    Item 2
+              </label>
+            </li>
+            <li class="list__item">
+              <label class="label--checkbox">
+                  <input type="checkbox" class="checkbox">
+                    Item 3
+              </label>
+            </li>
+            <li class="list__item">
+              <label class="label--checkbox">
+                  <input type="checkbox" class="checkbox">
+                    Item 4
+              </label>
+            </li>
+          </ul>
+        </section>
+              
+        <a href="https://www.twitter.com/sambego" target="_blank" class="button--round button--sticky">
+          <i class="fa fa-twitter"></i> 
+        </a>
+    </div>
+    <br>
+    <br>
+    <hr>
+    
+</body>
+</html>
